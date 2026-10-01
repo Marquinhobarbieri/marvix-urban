@@ -30,6 +30,13 @@ function updateWhatsapp(category) {
   whatsappLink.rel = 'noopener noreferrer';
 }
 updateWhatsapp();
+if (validWhatsapp) {
+  const phone = document.createElement('a');
+  phone.href = 'tel:+' + whatsapp;
+  phone.textContent = config.whatsappDisplay || '+' + whatsapp;
+  phone.setAttribute('aria-label', 'Llamar al ' + phone.textContent);
+  document.querySelector('#contact-details').append(phone);
+}
 if (validWhatsapp) document.querySelector('#contact-status').textContent = 'Conversemos sobre las necesidades de tu espacio.';
 else whatsappLink.addEventListener('click', event => { event.preventDefault(); showNotice('WhatsApp próximamente', 'El canal de cotizaciones estará disponible cuando MARVIX URBAN incorpore su número de contacto.'); });
 document.querySelectorAll('[data-category]').forEach(link => link.addEventListener('click', () => { updateWhatsapp(link.dataset.category); if(validWhatsapp) document.querySelector('#contact-status').textContent = 'Consulta sobre: ' + link.dataset.category + '.'; }));

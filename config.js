@@ -1,6 +1,7 @@
 // Edita estos datos antes de publicar. No incluyas contraseñas ni claves privadas.
 window.MARVIX_CONFIG = {
-  whatsapp: "", // Número internacional, solo dígitos: código de país + número.
+  whatsapp: "51994335124", // Número internacional, solo dígitos: código de país + número.
+  whatsappDisplay: "+51 994 335 124",
   whatsappMessage: "Hola, MARVIX URBAN. Quisiera solicitar una cotización para mi proyecto.",
   pdf: "", // Ejemplo: "assets/catalogo-marvix-urban.pdf"
   email: "", // Correo real de contacto (opcional).
