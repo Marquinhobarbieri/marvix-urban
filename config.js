@@ -12,7 +12,7 @@ window.MARVIX_CONFIG = {
     // Sustituye src por una ruta y alt por una descripción real de la foto.
     hero: { src: "banca-jardin.jpg", alt: "Banca con apoyabrazos junto a un jardín" },
     bancas: { src: "banca-ornamental.jpg", alt: "Banca con apoyabrazos y detalles ornamentales" },
-    sillas: { src: "", alt: "Silla MARVIX URBAN" },
+    bolardos: { src: "bolardos-negros.jpg", alt: "Bolardos negros con banda amarilla y base de anclaje" },
     faros: { src: "", alt: "Faro MARVIX URBAN" },
     basureros: { src: "reciclaje-tres.jpg", alt: "Estación de reciclaje con tres contenedores" },
     mobiliario: { src: "basurero-metalico.jpg", alt: "Basurero metálico para espacios urbanos" },
