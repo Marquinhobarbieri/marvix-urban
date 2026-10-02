@@ -48,6 +48,15 @@ document.querySelectorAll('[data-pdf]').forEach(link => {
 });
 if (config.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(config.email)) { const email = document.querySelector('[data-email]'); email.textContent = config.email; email.href = 'mailto:' + config.email; email.hidden = false; }
 if (config.location) { const location = document.querySelector('[data-location]'); location.textContent = config.location; location.hidden = false; }
+for (const [key, label] of [['tiktok', 'TikTok · @marvixurban.eirl'], ['facebook', 'Facebook · MARVIX URBAN EIRL']]) {
+  if (!/^https:\/\//i.test(config[key] || '')) continue;
+  const social = document.createElement('a');
+  social.href = config[key];
+  social.textContent = label;
+  social.target = '_blank';
+  social.rel = 'noopener noreferrer';
+  document.querySelector('#contact-details').append(social);
+}
 document.querySelectorAll('[data-image]').forEach(container => {
   const entry = (config.images || {})[container.dataset.image];
   const src = safeAsset(entry && entry.src);
