@@ -5,7 +5,7 @@ window.MARVIX_CONFIG = {
   tiktok: "https://www.tiktok.com/@marvixurban.eirl",
   facebook: "https://www.facebook.com/MARVIXURBANEIRL",
   whatsappMessage: "Hola, MARVIX URBAN. Quisiera solicitar una cotización para mi proyecto.",
-  pdf: "", // Ejemplo: "assets/catalogo-marvix-urban.pdf"
+  pdf: "marvix-urban-brochure.pdf", // Ejemplo: "assets/catalogo-marvix-urban.pdf"
   email: "", // Correo real de contacto (opcional).
   location: "", // Ciudad o dirección comercial (opcional).
   images: {
@@ -13,7 +13,7 @@ window.MARVIX_CONFIG = {
     hero: { src: "banca-jardin.jpg", alt: "Banca con apoyabrazos junto a un jardín" },
     bancas: { src: "banca-ornamental.jpg", alt: "Banca con apoyabrazos y detalles ornamentales" },
     bolardos: { src: "bolardos-negros.jpg", alt: "Bolardos negros con banda amarilla y base de anclaje" },
-    faros: { src: "", alt: "Faro MARVIX URBAN" },
+    faros: { src: "faro-tres-globos.jpg", alt: "Faro ornamental con tres globos" },
     basureros: { src: "reciclaje-tres.jpg", alt: "Estación de reciclaje con tres contenedores" },
     mobiliario: { src: "basurero-metalico.jpg", alt: "Basurero metálico para espacios urbanos" },
     juegos: { src: "juegos-torres.jpg", alt: "Juego infantil con torres de madera y túneles" },
