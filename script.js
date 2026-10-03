@@ -1,4 +1,34 @@
 "use strict";
+// Reuse the site's typographic brand as a watermark on every photograph.
+document.querySelectorAll('.media[data-image], .photo-link').forEach(container => {
+  const mark = document.createElement('span');
+  mark.className = 'watermark';
+  mark.setAttribute('aria-hidden', 'true');
+  const brand = document.createElement('span');
+  brand.className = 'brand';
+  brand.innerHTML = document.querySelector('.header .brand').innerHTML;
+  mark.append(brand);
+  container.append(mark);
+});
+const photoViewer = document.querySelector('#photo-viewer');
+const viewerImage = document.querySelector('#viewer-image');
+document.querySelectorAll('.photo-link').forEach(link => {
+  link.addEventListener('click', event => {
+    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const photo = link.querySelector('img');
+    viewerImage.src = link.href;
+    viewerImage.alt = photo.alt;
+    document.querySelector('#photo-caption').textContent = photo.alt;
+    photoViewer.showModal();
+  });
+});
+document.querySelector('.photo-close').addEventListener('click', () => photoViewer.close());
+photoViewer.addEventListener('click', event => {
+  if (event.target !== photoViewer) return;
+  const rect = photoViewer.getBoundingClientRect();
+  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) photoViewer.close();
+});
 const config = window.MARVIX_CONFIG || {};
 const menu = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#navegacion');

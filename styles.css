@@ -8,3 +8,18 @@
 
 /* Fotografías del catálogo */
 .photo-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 24px}.photo-link{display:flex;align-items:center;justify-content:center;background:#e0e3db;aspect-ratio:4/3;overflow:hidden}.photo-link img{display:block;width:100%;height:100%;object-fit:contain}.photo-link:hover{outline:2px solid var(--accent);outline-offset:3px}.photo-gallery figcaption{font-size:.875rem;line-height:1.5}.product-media.has-image img{object-fit:contain}.hero-visual.has-image{min-height:420px}@media(max-width:1000px){.photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.photo-gallery{grid-template-columns:1fr}.hero-visual.has-image{min-height:330px}}
+/* Marca de agua con la identidad de MARVIX URBAN */
+.photo-link{position:relative}
+.watermark{position:absolute;left:50%;top:55%;transform:translate(-50%,-50%);z-index:3;pointer-events:none;user-select:none;opacity:.56;color:white;filter:drop-shadow(0 1px 2px #000b)}
+.watermark .brand{font-size:clamp(1.35rem,3vw,2.5rem);color:white;white-space:nowrap}
+.watermark .brand>span{font-size:.48em;letter-spacing:.37em;margin-top:.4em}
+.watermark .brand-square{width:.65em;height:.65em;margin-left:.7em;background:var(--accent)}
+.media:not(.has-image)>.watermark{display:none}
+#photo-viewer{padding:52px 20px 16px;background:#202521;color:white;max-width:min(1100px,96vw);width:fit-content;max-height:95dvh;overflow:auto}
+#photo-viewer::backdrop{background:#0b100ded}
+.photo-stage{position:relative;display:flex;justify-content:center;align-items:center}
+#viewer-image{display:block;max-width:100%;max-height:72dvh;width:auto;height:auto;object-fit:contain}
+.photo-stage .watermark .brand{font-size:clamp(2rem,6vw,4.5rem)}
+#photo-caption{font-size:.875rem;line-height:1.5;color:#e2e5de;margin:15px 0 0;text-align:center}
+.photo-close{position:absolute;right:12px;top:6px;color:white;background:none;border:1px solid #788071;font-size:1.6rem;width:40px;height:40px;line-height:1}
+@media(max-width:700px){.product-media .watermark .brand{font-size:1.3rem}#photo-viewer{padding:52px 12px 14px}}
